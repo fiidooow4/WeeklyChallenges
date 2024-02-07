@@ -23,11 +23,11 @@ namespace ChallengesWithTestsMark8
             }
         }
 
-        public void ChangeNamesOfBusinessesWithNoRevenueTo_CLOSED(Business[] businesses)
+        public void ChangeNamesOfBusinessesWithNoRevenueTo_CLOSED(IEnumerable<Business> businesses)
         {
             if (businesses == null)
             {
-                throw new ArgumentNullException("businesses");
+                throw new ArgumentNullException(nameof(businesses));
             }
 
             foreach (var business in businesses)

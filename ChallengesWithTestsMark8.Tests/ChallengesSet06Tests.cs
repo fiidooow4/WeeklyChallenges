@@ -21,7 +21,7 @@ namespace ChallengesWithTestsMark8.Tests
         [InlineData(new string[] { null, "bravo", "chArlie" }, "charliE", false, false)]
         [InlineData(new string[] { null, null, "charlie" }, "bravo", true, false)]
         [InlineData(null, "alpha", true, false)]
-        public void CollectionContainsWord(IEnumerable<string> words, string word, bool ignoreCase, bool expected)
+        public void CollectionContainsWord_ValidInput(IEnumerable<string> words, string word, bool ignoreCase, bool expected)
         {
             // Arrange
             ChallengesSet06 challenger = new ChallengesSet06();
@@ -56,7 +56,7 @@ namespace ChallengesWithTestsMark8.Tests
         [InlineData(-5, false)]
         [InlineData(-101, false)]
         [InlineData(-99991, false)]
-        public void IsPrimeNumber(int number, bool expected)
+        public void IsPrimeNumber_ValidInput(int number, bool expected)
         {
             // Arrange
             ChallengesSet06 challenger = new ChallengesSet06();
@@ -85,7 +85,7 @@ namespace ChallengesWithTestsMark8.Tests
         [InlineData("aaabbbcdddeee", 6)]
         [InlineData("aaabbbcdddeeeffg", 15)]
         [InlineData("abbbccdddeeeffgg", 0)]
-        public void LastUniqueIndex(string str, int expected)
+        public void IndexOfLastUniqueLetter_ValidInput(string str, int expected)
         {
             // Arrange
             ChallengesSet06 challenger = new ChallengesSet06();
@@ -105,7 +105,7 @@ namespace ChallengesWithTestsMark8.Tests
         [InlineData(new int[] { 1, 2, 2, 3, 2 }, 2)]
         [InlineData(new int[] { 3, 3, 3, 2, 2 }, 3)]
         [InlineData(new int[] { 1, 3, 2, 3, 3, 3, 3 }, 4)]
-        public void MaxConsecutiveCount(int[] numbers, int expected)
+        public void MaxConsecutiveCount_ValidInput(int[] numbers, int expected)
         {
             // Arrange
             ChallengesSet06 challenger = new ChallengesSet06();
@@ -135,7 +135,7 @@ namespace ChallengesWithTestsMark8.Tests
         [InlineData(new double[] { }, 1, new double[] { })]
         [InlineData(null, 0, new double[] { })]
         [InlineData(null, 1, new double[] { })]
-        public void GetEveryNthElement_List(double[] numbers, int n, double[] expected)
+        public void GetEveryNthElement_List_ValidInput(double[] numbers, int n, double[] expected)
         {
             // Arrange
             ChallengesSet06 challenger = new ChallengesSet06();
